@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 #import useful libraries
 import requests, time, datetime#, json
 import numpy as np
@@ -18,12 +12,7 @@ import PIL
 from matplotlib.colors import ListedColormap, LinearSegmentedColormap
 from pylab import *
 
-
-# In[2]:
-
-
 #define functions
-
 def get_weather_data():
     Place = "Marsden" 
     API_key = "0f3b84c408fd239d3d09d637059518ae"
@@ -120,15 +109,6 @@ def _norm(max_val, min_val, value):
         return (value - min_val)/(max_val - min_val)
 
 
-# In[3]:
-
-
-get_weather_data()
-
-
-# In[32]:
-
-
 #define custom colourmaps
 
 cc = 1/225 #colour coefficient: matplotlib accepts values between 0 and 1
@@ -186,10 +166,6 @@ cdict = {'red':    [[0.0, 8*cc, 8*cc],
 
 day_night = LinearSegmentedColormap('day_night', segmentdata=cdict, N=256)
 
-
-# In[5]:
-
-
 #set colourmaps for each perameter
 cloudcover_cmap = cm.get_cmap('Greys')
 temperature_cmap = cm.get_cmap('coolwarm')
@@ -197,12 +173,7 @@ solar_elevation_cmap = day_night
 windspeed_cmap = wind_cmap
 rain_cmap = cm.get_cmap('Blues')
 
-
-# In[30]:
-
-
 data = get_weather_data()
-
 
 def get_image(data):
 
@@ -249,10 +220,3 @@ def get_image(data):
     im = PIL.Image.fromarray(np.uint8(colour_im_array*255))
     
     return im
-
-
-# In[ ]:
-
-
-
-
