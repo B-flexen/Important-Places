@@ -1,18 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import imageio
 import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk
 from pathlib import Path
-
-
-# In[3]:
-
 
 class videoplayer(ttk.Frame):
     def __init__(self, parent, video):
@@ -82,4 +72,3 @@ class videoplayer(ttk.Frame):
     def restartbutton(self):
         self.frame_no = 0
         self.bar.config(value = self.frame_no)
-
