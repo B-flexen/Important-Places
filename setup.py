@@ -1,4 +1,4 @@
-import setuptools
+yimport setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -16,6 +16,10 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent"],
-    scripts = ["bin/run"],
+    enrty_points={
+        "console_scripts": [
+            "Important-Places = Important-Places.__main__:main"
+        ]
+    },,
     python_requires='>=3.6',
 )
