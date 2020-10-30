@@ -3,9 +3,9 @@
 import tkinter as tk
 import argparse
 from tkinter import ttk
-from videoplayer_widget import videoplayer
-from moors_vis import *
-from mars_vis import *
+from libs.videoplayer_widget import videoplayer
+from libs.moors_vis import *
+from libs.mars_vis import *
 from PIL import ImageTk, Image
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
@@ -76,14 +76,14 @@ def update_colour_chart():
         colour_chart.image = new_im
     except:
         print("running exception")
-        new_im = ImageTk.PhotoImage(file='error.png')
+        new_im = ImageTk.PhotoImage(file='medai/error.png')
         colour_chart.configure(image=new_im)
         colour_chart.image = new_im
         
     
     root.after(20000, update_colour_chart)
     
-video_2019 = videoplayer(tab2, "2019_weather_colour.mp4")
+video_2019 = videoplayer(tab2, "media/2019_weather_colour.mp4")
 video_2019.grid(column = 1, row = 1)
 
 #Tab 3 - Mars page
@@ -100,7 +100,7 @@ try:
     mars_temp_plot = FigureCanvasTkAgg(get_mars_figure(nasa_api), tab3)
     mars_temp_plot.get_tk_widget().grid(column=1, row=0)
 except:
-    im = ImageTk.PhotoImage(file='error.png')
+    im = ImageTk.PhotoImage(file='media/error.png')
     mars_temp_plot = ttk.Label(tab3, image=im)
     mars_temp_plot.image = im
     mars_temp_plot.grid(column=1, row=0)
@@ -111,7 +111,7 @@ try:
     mars_photo_im = mars_photo_im.resize((350, 250), Image.ANTIALIAS)
     mars_photo_im = ImageTk.PhotoImage(mars_photo_im)
 except:
-    mars_photo_im = ImageTk.PhotoImage(file='error.png')
+    mars_photo_im = ImageTk.PhotoImage(file='media/error.png')
     
 mars_photo_lab = ttk.Label(tab3, image = mars_photo_im)
 mars_photo_lab.image = mars_photo_im
