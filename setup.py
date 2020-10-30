@@ -20,6 +20,6 @@ setuptools.setup(
         "console_scripts": [
             "Important-Places = Important-Places.__main__:main"
         ]
-    },,
+    },
     python_requires='>=3.6',
 )
