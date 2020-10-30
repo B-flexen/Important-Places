@@ -16,6 +16,7 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
+    scripts = ["Important-Places/important-places.py"]
     ],
     python_requires='>=3.6',
 )
