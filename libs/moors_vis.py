@@ -1,11 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 #import useful libraries
-import requests, time, datetime#, json
+import requests, time, datetime
 import numpy as np
 import matplotlib.cm as cm
 from pysolar.solar import *
@@ -16,12 +10,7 @@ from random import choice
 import io
 import PIL
 
-
-# In[2]:
-
-
 #define functions
-
 def get_weather_data(place, API_key):
     params = {'q':place, 'appid':API_key}
     URL = "http://api.openweathermap.org/data/2.5/weather?"
@@ -174,10 +163,6 @@ cdict = {'red':    [[0.0, 8*cc, 8*cc],
 
 day_night = LinearSegmentedColormap('day_night', segmentdata=cdict, N=256)
 
-
-# In[5]:
-
-
 #set colourmaps for each perameter
 cloudcover_cmap = cm.get_cmap('Greys')
 temperature_cmap = cm.get_cmap('coolwarm')
@@ -231,10 +216,3 @@ def get_image(data):
     im = PIL.Image.fromarray(np.uint8(colour_im_array*255))
     
     return im
-
-
-# In[ ]:
-
-
-
-
