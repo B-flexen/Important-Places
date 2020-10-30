@@ -16,6 +16,6 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent"],
-    scripts = ["run"],
+    scripts = ["bin/run"],
     python_requires='>=3.6',
 )
