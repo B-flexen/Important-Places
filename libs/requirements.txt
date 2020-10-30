@@ -1,0 +1,7 @@
+Tkinter
+pysolar
+matplotlib
+seaborn
+numpy
+pytz
+imageio
