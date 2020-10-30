@@ -1,18 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import imageio
 import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
 from pathlib import Path
-
-
-# In[2]:
-
 
 class videoplayer(ttk.Frame):
     def __init__(self, parent, video):
@@ -46,8 +36,6 @@ class videoplayer(ttk.Frame):
         #progress bar
         self.bar = ttk.Progressbar(self, length = self.framelist[0].width(), maximum = len(self.framelist))
         self.bar.grid(row=1, columnspan=2)
-
-        
 
         self.play = ttk.Button(self, command=self.playpausebutton, textvariable=self.play_button_text)
         self.play.grid(row=2, column=0, sticky="W")
