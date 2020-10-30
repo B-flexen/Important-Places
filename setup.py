@@ -18,7 +18,7 @@ setuptools.setup(
         "Operating System :: OS Independent"],
     enrty_points={
         "console_scripts": [
-            "Important-Places = Important-Places.__main__:main"
+            "Important-Places = __main__:main"
         ]
     },
     python_requires='>=3.6',
