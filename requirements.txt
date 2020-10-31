@@ -5,3 +5,4 @@ numpy
 pytz
 imageio
 imageio-ffmpeg
+requests
