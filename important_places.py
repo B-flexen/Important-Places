@@ -68,7 +68,7 @@ try:
     im = ImageTk.PhotoImage(get_image(get_weather_data("Marsden", ow_api)))
     
 except:
-    im = ImageTk.PhotoImage(file='error.png')
+    im = ImageTk.PhotoImage(file='media/error.png')
 
 colour_chart = ttk.Label(tab2, image=im)
  #keep a reference to the image (otherwise it is garbage collected)
@@ -81,7 +81,7 @@ def update_colour_chart():
         colour_chart.image = new_im
     except:
         print("running exception")
-        new_im = ImageTk.PhotoImage(file='medai/error.png')
+        new_im = ImageTk.PhotoImage(file='media/error.png')
         colour_chart.configure(image=new_im)
         colour_chart.image = new_im
         
